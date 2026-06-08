@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PERSONA — Shop the Drop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shop.css" />
+</head>
+<body>
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <nav>
+    <a class="nav-logo" href="index.html">Persona.</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#drops">Drops</a></li>
+      <li><a href="index.html#how">How it works</a></li>
+      <li><a href="#" style="color:var(--gold)">Shop</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header">
+    <h1>The <em>Collection.</em></h1>
+    <div class="page-header-meta">
+      <p>All designs · Limited stock</p>
+      <span>₹799</span>
+      <p style="margin-top:4px">Free shipping above ₹1499</p>
+    </div>
+  </header>
+
+  <div class="filter-bar" aria-label="Product filters">
+    <span class="filter-label">Filter ·</span>
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="batman">Batman</button>
+    <button class="filter-btn" data-filter="joker">Joker</button>
+    <button class="filter-btn" data-filter="marvel">Marvel</button>
+    <button class="filter-btn" data-filter="deadpool">Deadpool</button>
+    <button class="filter-btn" data-filter="loki">Loki</button>
+  </div>
+
+  <main class="shop-grid" id="shopGrid"></main>
+
+  <div class="modal-overlay" id="modalOverlay" aria-hidden="true">
+    <button class="modal-close" id="modalClose" aria-label="Close product details">×</button>
+    <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-visual">
+        <div class="modal-visual-bg"></div>
+        <img class="modal-design-image" id="modalImage" src="" alt="" />
+      </div>
+      <div class="modal-info">
+        <p class="modal-universe" id="modalUniverse"></p>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <p class="modal-price" id="modalPrice"></p>
+        <p class="modal-desc" id="modalDesc"></p>
+        <p class="modal-label">Select Size</p>
+        <div class="modal-sizes" id="modalSizes"></div>
+        <button class="modal-add-btn" id="modalAddBtn">Add to Cart — ₹799</button>
+        <div class="modal-tags" id="modalTags"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-toast" id="cartToast">Added to cart ✦</div>
+
+  <footer class="shop-footer">
+    <p>© 2025 Persona.</p>
+    <p><a href="index.html">← Back to Home</a></p>
+  </footer>
+
+  <script src="shop.js"></script>
+</body>
+</html>
