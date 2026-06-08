@@ -1,0 +1,50 @@
+GitHub upload checklist
+
+Upload the CONTENTS of this folder to your repository, not the folder as one file.
+
+The repository should look like this:
+
+index.html
+shop.html
+cart.html
+checkout.html
+shop.css
+shop.js
+cart.js
+checkout.js
+.nojekyll
+images/
+  img_01.png
+  img_02.png
+  ...
+  img_16.png
+google-sheets-order-endpoint.gs
+
+Important:
+- Keep the folder name exactly: images
+- Keep image file names exactly lowercase: img_01.png, img_02.png, etc.
+- Do not put the images beside shop.html unless you also change the paths in shop.js.
+- Do not upload only the zip file to GitHub Pages. Extract it first, then upload the files and images folder.
+
+If images show as white or broken boxes, open this URL pattern in the browser:
+
+https://YOUR-USERNAME.github.io/YOUR-REPO/images/img_01.png
+
+If that image URL does not open, GitHub does not have the images folder in the right place.
+
+Cart and checkout:
+- The cart works in the customer's browser using localStorage.
+- Checkout has no payment right now.
+- If checkout.js has ORDERS_ENDPOINT blank, test orders are saved only in that browser.
+
+To save orders into Google Sheets:
+1. Create a Google Sheet.
+2. Open Extensions > Apps Script.
+3. Paste the contents of google-sheets-order-endpoint.gs.
+4. Deploy > New deployment > Web app.
+5. Set "Execute as" to Me.
+6. Set "Who has access" to Anyone.
+7. Copy the Web App URL.
+8. Paste it into checkout.js here:
+   const ORDERS_ENDPOINT = 'YOUR_WEB_APP_URL_HERE';
+9. Upload the updated checkout.js to GitHub.
