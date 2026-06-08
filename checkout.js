@@ -3,7 +3,7 @@ const ORDERS_STORAGE_KEY = 'persona_test_orders';
 
 // Paste your deployed Google Apps Script Web App URL here.
 // Leave blank to test locally: orders will be stored in this browser only.
-const ORDERS_ENDPOINT = '';
+const ORDERS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbykmkHRNMb5ZkIQIG7ROU8jjed4CkURWquIw_rnt_2GAfnqeYdaZjtRXHSxhLN8DBKv/exec';
 
 const checkoutItemsEl = document.getElementById('checkoutItems');
 const checkoutItemsCount = document.getElementById('checkoutItemsCount');
